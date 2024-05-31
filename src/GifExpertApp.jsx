@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react"
 import { AddCategory } from './components/AddCategory'
+import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
 
@@ -22,12 +23,12 @@ export const GifExpertApp = () => {
 
         {/* <button onClick={onAddCategory}>Agregar</button> */}
 
-        <ol>
-            { categories.map((category, i) => {
-                return <li key={category}>{category}</li>
-            }) }            
-        </ol>
-
+        { 
+            categories.map((category, i) => (
+                    <GifGrid key={category} category={category} />                        
+                )
+            ) 
+        }            
     </>
   )
 }
