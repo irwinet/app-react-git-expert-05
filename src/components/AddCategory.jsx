@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
 
-export const AddCategory = ({ setCategories }) => {
+export const AddCategory = ({ onNewCategory }) => {
 
   const [inputValue, setInputValue] = useState('')
 
@@ -13,8 +13,9 @@ export const AddCategory = ({ setCategories }) => {
     event.preventDefault();
     // console.log(event);
     if(inputValue.trim().length<=1) return;
-    setCategories( cat => [inputValue, ...cat]);
+    // setCategories( cat => [inputValue, ...cat]);
     setInputValue('');
+    onNewCategory(inputValue.trim());
   }
 
   return (
