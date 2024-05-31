@@ -8,6 +8,7 @@ export const GifExpertApp = () => {
 
   //   console.log(categories);
   const onAddCategory = (newCategory) => {
+    if(categories.includes(newCategory)) return;
     setCategories([newCategory, ...categories]);
     // setCategories(cat => [...cat, 'Valorant']);
   }
@@ -22,7 +23,7 @@ export const GifExpertApp = () => {
         {/* <button onClick={onAddCategory}>Agregar</button> */}
 
         <ol>
-            { categories.map(category => {
+            { categories.map((category, i) => {
                 return <li key={category}>{category}</li>
             }) }            
         </ol>
