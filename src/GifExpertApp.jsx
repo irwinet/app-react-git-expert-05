@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react"
-import { AddCategory } from './components/AddCategory'
-import { GifGrid } from "./components/GifGrid";
+import { GifGrid, AddCategory } from "./components";
 
 export const GifExpertApp = () => {
 
